@@ -11,12 +11,12 @@ const App = () => {
   // ✅ Fetch Google Sheets data through Apps Script on page load
   useEffect(() => {
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbx3sAC5Eq0fgCocja42K7P0CeuRrL9wAOaLCJGqSrEr1weu6Jo5OlkZPPSDxDJ83xwb/exec";
+      "https://script.google.com/macros/s/AKfycbxZmPSBmesjCPYHzptQkBFb37QSMWSELAcyPL9MsJn86ew0s0kG66lma9nZznG8aGXa/exec";
 
     fetch(scriptURL)
       .then((response) => response.json())
       .then((data) => {
-       
+       console.log("the data",data);
         setData(data);
         setNumbers(Array.from({ length: data.length }, (_, i) => i + 1));
       })
@@ -150,7 +150,7 @@ const App = () => {
                   transition={{ duration: 0.6, repeat: spinning ? Infinity : 0 }}
                 >
                   <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-                    {spinning ? "🎲" : selectedNumber ?? "?"}
+                    {spinning ? "🎲" :selectedNumber  ?? "?"}
                   </span>
                 </motion.div>
               </div>
@@ -174,7 +174,7 @@ const App = () => {
           }`}
         >
           {numbers.length === 0
-            ? "Loading..."
+            ? "All the data are displayed"
             : data.length === 0
             ? "Loading..."
             : "Spin the Wheel!"}
@@ -192,12 +192,14 @@ const App = () => {
             <p className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-yellow-300 drop-shadow-2xl mt-3 animate-bounce">
               {selectedNumber}
             </p>
+            <p className="text-xl sm:text-2xl font-light">🎉 Registration Number:</p>
+            <p className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-yellow-300 drop-shadow-2xl mt-3 animate-bounce">
+              {data[selectedNumber - 1][0]}
+            </p>
             <p className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-yellow-300 drop-shadow-2xl mt-3 animate-bounce">
               {data[selectedNumber - 1][2]}
             </p>
-            <p className="text-5xl sm:text-6xl md:text-4xl font-extrabold text-yellow-300 drop-shadow-2xl mt-3 animate-bounce">
-              {data[selectedNumber - 1][1]}
-            </p>
+           
           </motion.div>
         )}
       </main>
