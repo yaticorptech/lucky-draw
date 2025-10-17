@@ -103,7 +103,7 @@ const App = () => {
         ))}
 
         <h2 className="text-4xl sm:text-5xl font-extrabold mb-10 text-center drop-shadow-2xl tracking-wide">
-          🎪 Royal Circus Spinner 🎡
+          🎪 Lucky Wheel Spinner 🎡
         </h2>
 
         {/* Spinner Wheel */}
