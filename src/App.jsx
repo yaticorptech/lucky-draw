@@ -78,14 +78,31 @@ const App = () => {
         <img
           src="/images/logo-3.png"
           alt="Logo"
+          className="h-10 sm:h-8 md:h-10 lg:h-12 w-auto"
+        />
+           <img
+          src="/images/buddhiman logo white .png"
+          alt="Logo"
           className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto"
         />
+          <img
+          src="/images/jci samrat.png"
+          alt="Logo"
+          className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto"
+        />
+          <img
+          src="/images/JCI Kahale Logo.png"
+          alt="Logo"
+          className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto"
+        />
+        
+        
         <nav className="flex space-x-6 sm:space-x-8">
-          <a href="/" className="font-semibold hover:text-yellow-400 transition-colors">
-            Home
+          <a href="https://yaticorp.com/" target="blank" className="font-semibold hover:text-yellow-400 transition-colors">
+            Yaticorp
           </a>
-          <a href="/about" className="font-semibold hover:text-yellow-400 transition-colors">
-            About
+          <a href="https://www.buddhiman.in/" target="blank" className="font-semibold hover:text-yellow-400 transition-colors">
+            Buddhiman
           </a>
         </nav>
       </header>
@@ -206,6 +223,7 @@ const App = () => {
 
       {/* Footer */}
       <footer className="w-full py-3 sm:py-4 bg-black/40 backdrop-blur-sm text-center shadow-inner mt-auto border-t-2 border-yellow-400">
+        
         <p className="text-sm sm:text-lg">© 2025 Yaticorp India Pvt Ltd</p>
       </footer>
     </div>
