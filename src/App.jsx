@@ -16,7 +16,7 @@ const App = () => {
     fetch(scriptURL)
       .then((response) => response.json())
       .then((data) => {
-       console.log("the data",data);
+      //  console.log("the data",data);
         setData(data);
         setNumbers(Array.from({ length: data.length }, (_, i) => i + 1));
       })
