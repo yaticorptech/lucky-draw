@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const App = () => {
-  const [data, setData] = useState([]); // fetched data from Apps Script
-  const [numbers, setNumbers] = useState([]); // wheel numbers based on data length
+  const [data, setData] = useState([]); 
+  const [numbers, setNumbers] = useState([]); 
   const [selectedNumber, setSelectedNumber] = useState(null);
   const [spinning, setSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
 
-  // ✅ Fetch Google Sheets data through Apps Script on page load
   useEffect(() => {
     const scriptURL =
       "https://script.google.com/macros/s/AKfycbxZmPSBmesjCPYHzptQkBFb37QSMWSELAcyPL9MsJn86ew0s0kG66lma9nZznG8aGXa/exec";
